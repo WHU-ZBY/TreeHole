@@ -1,0 +1,17 @@
+<!--先静后动，先样式再数据-->
+<view class="container">
+
+  <view class="name-date">
+    <text class="author">{{listDetails.name}}</text>
+    <text class="const-text">回复你：</text>
+    <text class="date">{{listDetails.data}}</text>
+  </view>
+  <view class="horizon"></view>
+  <text class="detail">{{listDetails.content}}</text>
+  <form bindsubmit="doSubmit">
+    <view class="textarea-wrp">
+      <textarea name="content" maxlength="200" style="height:3em"  auto-height="ture" placeholder="回复他，友善是讨论的开始" />
+    </view>
+    <button type="primary" size="{{primarySize}}" formType="submit" disabled="{{disabledSubmitBtn}}">回复</button>
+  </form>
+</view>

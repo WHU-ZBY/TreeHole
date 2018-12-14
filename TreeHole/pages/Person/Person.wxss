@@ -1,0 +1,40 @@
+/* pages/Person/Person.wxss */
+page{
+  background-color:  aliceblue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+}
+
+.user-image-name {
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.avatar {
+  border-radius:50%;
+   overflow:hidden;
+}
+
+.name {
+  margin-left: 40rpx;
+  vertical-align: middle;
+  font-size: 36rpx;
+  text-align: center;
+}
+.text{
+ flex-direction: column;
+  display: flex;
+  margin-top: 100rpx;
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  border-bottom: 1px solid  lightgray;
+  border-top: 1px solid  lightgray;
+  padding-bottom: 1px;
+  font-size: 48rpx;
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+/* pages/interests/interests.wxss */
+page{
+  background-color:  beige
+}
+.part{
+  border: 1px solid  lightgray;
+  padding-bottom: 1px;
+  margin: 10px;
+  display: flex;
+  float: left;
+}
+.interest{
+  font-size: 32px;
+  margin: 10px;
+}

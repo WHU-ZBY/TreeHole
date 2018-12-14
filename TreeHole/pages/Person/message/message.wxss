@@ -1,0 +1,5 @@
+/* pages/List/List.wxss */
+@import "message-item/message-item-template.wxss";
+.background{
+  background-color:  cornsilk
+}

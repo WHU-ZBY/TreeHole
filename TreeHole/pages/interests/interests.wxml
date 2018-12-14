@@ -1,0 +1,47 @@
+<!--pages/interests/interests.wxml-->
+
+<view >
+<view class="col">
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >娱乐明星</text></view>
+</view>
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >影视</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >体育</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >宗教</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >舔狗</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+<view class="part" catchtap="onPostTap">
+<text class= "interest" >吐槽</text></view>
+
+</view>

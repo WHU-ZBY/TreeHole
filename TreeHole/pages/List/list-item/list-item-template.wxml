@@ -1,0 +1,11 @@
+
+<template name="listItem">
+  <view class="list-contaioner">
+    <view class="list-author-data">
+       <image class="list-image" src="{{avatar}}"></image>
+      <text class="list-name">{{name}}</text>
+      <text class="list-date">{{date}}</text>
+    </view>
+    <text class="list-content">{{content}}</text>
+  </view>
+</template>

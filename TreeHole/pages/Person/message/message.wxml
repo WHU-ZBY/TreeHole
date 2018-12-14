@@ -1,0 +1,10 @@
+<import src="message-item/message-item-template.wxml" />
+<view>
+  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+    <!--//template-->
+    <view catchtap="onPostTap" data-listId="{{item.id}}">
+      <template is="messageItem" data="{{...item}}" />
+    </view>
+  </block>
+
+</view>

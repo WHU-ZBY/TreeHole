@@ -1,0 +1,14 @@
+page{
+  background:  azure;
+}
+textarea {
+    font-size: 42rpx;
+    padding: 50rpx 30rpx;
+    border: 3rpx solid  lightgray
+}
+button {
+    margin: 10rpx 20rpx;
+    background: transparent;
+    color: #adadad;
+    border: 1rpx solid #c6c6c6;   
+}

@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="user-image-name">
+    <image class="avatar" style="width: 100px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{myMessage.avatar}}"></image>
+  </view>
+  <text class="name">{{myMessage.name}}</text>
+
+  <navigator id="settings" url="/pages/Person/setting/setting">
+    <text class="text">设置</text>
+  </navigator>
+  <navigator id="messgaes" url="/pages/Person/message/message">
+    <text class="text">消息</text>
+  </navigator>
+
+    <navigator id="text" url="/pages/text/text">
+    <text class="text">测试</text>
+  </navigator>
+</view>
