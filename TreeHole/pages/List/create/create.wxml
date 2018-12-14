@@ -1,4 +1,7 @@
 <form bindsubmit="doSubmit">
-    <textarea name="content"  bindblur="bindTextAreaBlur" maxlength="500" placeholder="你想说啥就写在这~" />
+    <textarea name="content"   value='{{concent}}' bindblur="bindTextAreaBlur" maxlength="500" placeholder="你想说啥就写在这~" focus="{{focus}}"  />
     <button formType="submit" disabled="{{disabledSubmitBtn}}" catchtap="onPostTap" >发送</button>
 </form>
+
+
+<view>{{concent1}}</view>

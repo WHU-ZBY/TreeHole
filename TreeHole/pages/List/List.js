@@ -7,10 +7,10 @@ Page({
 
     var that = this;
     wx.request({
-      url: 'https://andyfool.com/file/test/GetAllMessage', //仅为示例，并非真实的接口地址
+      url:'https://andyfool.com/file/Get/GetAllMessage',//仅为示例，并非真实的接口地址
       data: {
       },
-      method: 'Get',
+      method: 'Post',
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -21,7 +21,7 @@ Page({
           'datalist': object,
         });
         app.listData=object;
-        //console.log(app.listData)
+       //console.log(app.listData)
       }
     })
   },
@@ -33,6 +33,7 @@ Page({
       wx.hideNavigationBarLoading() //完成停止加载
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
+    this.onLoad();
   },
 
   onPostTap: function (event) {

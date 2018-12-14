@@ -1,7 +1,17 @@
+<!--index.wxml-->
 <view class="container">
-    <image class="avatar" src="/images/1.jpg"></image>
-    <text class="motto">Hello</text>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
     <view class="journey-container" bindtap="onTap">
         <text class="journey">进入树洞</text>
     </view>
+  </view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
 </view>

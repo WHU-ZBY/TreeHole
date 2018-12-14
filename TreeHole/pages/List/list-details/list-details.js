@@ -1,5 +1,4 @@
 
-//var postsData = require('../List.js')
 var app = getApp();
 Page({
   data: {
