@@ -8,7 +8,17 @@ Page({
   data: {
     re_content:'',
     wxid:'1111',
+    region:'1',
 
+  },
+  onLoad: function (option) {
+    var listId = option.id;
+    console.log("aa");
+    console.log(listId);
+    console.log("aa");
+    this.setData({
+      region:listId,
+    })
   },
   bindTextAreaBlur: function (e) {
     var that=this;
@@ -19,10 +29,12 @@ Page({
   },    
   onPostTap:function()
   {
-
+    console.log("aa");
+    console.log(this.data.region);
+    console.log("aa");
     var that=this;
     wx.request({
-      url: 'https://andyfool.com/file/Upload/UpMessage?name=' + app.globalData.userInfo.nickName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'v&region=1&imageId=1',//仅为示例，并非真实的接口地址
+      url: 'https://andyfool.com/file/Upload/UpMessage?name=' + app.globalData.userInfo.nickName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'&region='+this.data.region+'&imageId='+this.data.imageid,
       data: {
   
       },
