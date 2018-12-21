@@ -2,46 +2,46 @@
 
 <view >
 <view class="col">
-<view class="part" catchtap="onPostTap">
+<view class="part" data-listId='1' catchtap="onPostTap">
 <text class= "interest" >吐槽</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >娱乐明星</text></view>
+<view class="part" data-listId='2' catchtap="onPostTap">
+<text class= "interest" >娱乐</text></view>
 </view>
-<view class="part" catchtap="onPostTap">
+<view class="part"  data-listId='3' catchtap="onPostTap">
 <text class= "interest" >影视</text></view>
 
-<view class="part" catchtap="onPostTap">
+<view class="part"  data-listId='4' catchtap="onPostTap">
 <text class= "interest" >体育</text></view>
 
-<view class="part" catchtap="onPostTap">
+<view class="part"  data-listId='5' catchtap="onPostTap">
 <text class= "interest" >宗教</text></view>
 
-<view class="part" catchtap="onPostTap">
+<view class="part"  data-listId='6' catchtap="onPostTap">
 <text class= "interest" >舔狗</text></view>
 
-<view class="part" catchtap="onPostTap">
+<view class="part"  data-listId='7'catchtap="onPostTap">
 <text class= "interest" >吐槽</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part"  data-listId='8'catchtap="onPostTap">
+<text class= "interest" >军事</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part" data-listId='9' catchtap="onPostTap">
+<text class= "interest" >海外</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part"  data-listId='10'catchtap="onPostTap">
+<text class= "interest" >教育</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part" data-listId='11' catchtap="onPostTap">
+<text class= "interest" >游戏</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part"  data-listId='12'catchtap="onPostTap">
+<text class= "interest" >电影</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part"  data-listId='13'catchtap="onPostTap">
+<text class= "interest" >欧美</text></view>
 
-<view class="part" catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<view class="part" data-listId='14' catchtap="onPostTap">
+<text class= "interest" >日韩</text></view>
 
 </view>

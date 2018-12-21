@@ -17,9 +17,9 @@ Page({
 
   onPostTap: function (event) {
     var listId = event.currentTarget.dataset.listid;
-    // console.log("on post id is" + listId);
+     console.log("on region id is" + listId);
     wx.navigateTo({
-      url: "../List/List"
+      url: "../List/List?id=" + listId
     })
   },
 

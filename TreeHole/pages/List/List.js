@@ -3,11 +3,11 @@ Page({
   data:{
     datalist: []
   },
-  onLoad:function(){
-
+  onLoad: function (option){
+    var regionId = option.id;
     var that = this;
     wx.request({
-      url:'https://andyfool.com/file/Get/GetAllMessage',//仅为示例，并非真实的接口地址
+      url:'https://andyfool.com/file/Get/GetMessage?region='+regionId,//仅为示例，并非真实的接口地址
       data: {
       },
       method: 'Post',
