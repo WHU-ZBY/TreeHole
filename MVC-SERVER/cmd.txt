@@ -1,0 +1,11 @@
+sh /usr/jexus/jws stop
+cd /home/MVC
+dotnet restore
+dotnet publish -c Release -r linux-x64
+dotnet publish -o /var/www/MVC
+sh /usr/jexus/jws restart
+sh /usr/jexus/jws start
+
+
+
+114.116.39.8
