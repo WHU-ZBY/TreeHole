@@ -1,0 +1,15 @@
+CREATE SCHEMA `wxdb` ;
+
+CREATE TABLE `wxdb`.`messages` (
+  `msId` INT NOT NULL,
+  `name` CHAR(45) NULL,
+  `wxid` CHAR(45) NULL,
+  `content` CHAR(225) NULL,
+  `time` CHAR(45) NULL,
+  `region` CHAR(45) NULL,
+  PRIMARY KEY (`msId`));
+
+
+
+  sudo mysql -u root -p 
+@Qq132325
