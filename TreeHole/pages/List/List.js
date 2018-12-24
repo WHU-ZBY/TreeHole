@@ -1,3 +1,4 @@
+var imgaeID = require('../../data/image.js')
 const app=getApp();
 Page({
   data:{

@@ -1,7 +1,15 @@
 <form bindsubmit="doSubmit">
   <view class="changeName">
-    <textarea name="content" maxlength="20" style="height: 2em" placeholder="填新昵称~" />
-    <button type="primary" size="{{primarySize}}" formType="submit" disabled="{{disabledSubmitBtn}}">确认修改</button>
+    <textarea name="content" maxlength="20" style="height: 2em" bindblur='bindTextAreaBlur'  placeholder="填新昵称~" />
+    <button type="primary" size="{{primarySize}}" formType="submit" focus="{{focus}}" bindtap="fabiao">确认修改</button>
   </view>
-
 </form>
+<view class="select">
+<text class="avater">选择扮演的角色</text>
+<button type="default" size="{{defaultSize}}" >锐雯</button>
+<button type="default" size="{{defaultSize}}" >武器大师</button>
+<button type="default" size="{{defaultSize}}" >菲奥娜</button>
+<button type="default" size="{{defaultSize}}" >皎月</button>
+<button type="default" size="{{defaultSize}}" >薇恩</button>
+<button type="default" size="{{defaultSize}}" >艾瑞莉娅</button>
+</view>

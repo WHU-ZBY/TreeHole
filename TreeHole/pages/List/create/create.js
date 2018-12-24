@@ -34,7 +34,7 @@ Page({
     console.log("aa");
     var that=this;
     wx.request({
-      url: 'https://andyfool.com/file/Upload/UpMessage?name=' + app.globalData.userInfo.nickName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'&region='+this.data.region+'&imageId='+this.data.imageid,
+      url: 'https://andyfool.com/file/Upload/UpMessage?name=' + app.globalData.userInfo.nickName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'&region='+this.data.region+'&imageId='+app.globalData.userImage,
       data: {
   
       },

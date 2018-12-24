@@ -1,8 +1,8 @@
 <view class="container">
   <view class="user-image-name">
-    <image class="avatar" style="width: 100px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{myMessage.avatar}}"></image>
+    <image class="avatar" style="width: 100px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{imageName}}"></image>
   </view>
-  <text class="name">{{myMessage.name}}</text>
+  <text class="name">{{name}}</text>
 
   <navigator id="settings" url="/pages/Person/setting/setting">
     <text class="text">设置</text>

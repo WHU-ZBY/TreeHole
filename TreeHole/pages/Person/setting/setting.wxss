@@ -12,3 +12,6 @@ button {
     color: #adadad;
     border: 1rpx solid #c6c6c6;   
 }
+.avater{
+  font-size: 42rpx;
+}

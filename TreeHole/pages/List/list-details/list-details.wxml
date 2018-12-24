@@ -3,7 +3,7 @@
 <view class="container">
  
   <view class="author-date">
-    <image class="avatar" src="/images/list/2.png"></image>
+    <image class="avatar" src="{{imagelocal}}"></image>
     <text class="author">{{listDetails.name}}</text>
     <text class="const-text">发表于</text>
     <text class="date">{{listDetails.datatime}}</text>
