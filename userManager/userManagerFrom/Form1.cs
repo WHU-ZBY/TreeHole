@@ -18,7 +18,7 @@ namespace userManagerFrom
     public partial class Form1 : Form
     {
         string str;
-        string Strmsid;
+        public string Strmsid;
         userService userservice = new userService();
         public Form1()
         {
@@ -52,7 +52,14 @@ namespace userManagerFrom
             if (bindingSource1.Current != null)
             {
                 user user1 = (user)bindingSource1.Current;
-                userservice.deleteUser(user1.MsId);
+                Strmsid = user1.MsId.ToString();
+                //执行删除
+                string url = "https://andyfool.com/file/DelMs/DelMs?msid=" + Strmsid;
+                HttpApiDel(url, "{}", "POST");
+                //获取新的信息
+                string urlt = "https://andyfool.com/file/Get1/GetMessage?region=1";
+                str = HttpApi(urlt, "{}", "POST");
+                userservice.users = JsonConvert.DeserializeObject<List<user>>(str);
                 bindingSource1.DataSource = userservice.users;
             }
             else
@@ -63,10 +70,21 @@ namespace userManagerFrom
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string url = "https://andyfool.com/file/Get/GetMessage?region=1";
+            string url = "https://andyfool.com/file/Get1/GetMessage?region=1";
             str = HttpApi(url, "{}", "POST");
             userservice.users = JsonConvert.DeserializeObject<List<user>>(str);
             bindingSource1.DataSource = userservice.users;
+        }
+        public static void HttpApiDel(string url, string jsonstr, string type)
+        {
+            Encoding encoding = Encoding.UTF8;
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);//webrequest请求api地址
+            request.Accept = "text/html,application/xhtml+xml,*/*";
+            request.ContentType = "application/json";
+            request.Method = type.ToUpper().ToString();//get或者post
+            byte[] buffer = encoding.GetBytes(jsonstr);
+            request.ContentLength = buffer.Length;
+            request.GetRequestStream().Write(buffer, 0, buffer.Length);
         }
         public static string HttpApi(string url, string jsonstr, string type)
         {
@@ -83,6 +101,16 @@ namespace userManagerFrom
             {
                 return reader.ReadToEnd();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            user user1 = (user)bindingSource1.Current;
+            Strmsid = user1.MsId.ToString();
+            form2.mesId = Strmsid;
+            form2.Visible = false;
+            form2.ShowDialog();
         }
     }
 }
