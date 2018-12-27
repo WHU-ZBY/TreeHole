@@ -32,7 +32,7 @@ Page({
     console.log("aa");
     var that = this;
     wx.request({
-      url: 'https://andyfool.com/file/Upload2/UpReply?name=' + app.globalData.userName + '&content=' + this.data.re_content + '&wxId=' + this.data.wxid + '&replyTo='+this.data.msid+ '&imageId=' + 1 + '&replytowx=' + this.data.replytowx,
+      url: 'https://andyfool.com/file/Upload2/UpReply?name=' + app.globalData.userName + '&content=' + this.data.re_content + '&wxId=' + app.globalData.wxid + '&replyTo='+this.data.msid+ '&imageId=' + 1 + '&replytowx=' + this.data.replytowx,
       data: {
 
       },

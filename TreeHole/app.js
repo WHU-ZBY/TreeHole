@@ -37,5 +37,11 @@ App({
       }
     })
   },
-  
+  onLaunch: function () {
+    //云开发初始化
+    wx.cloud.init({
+      env: 'test-9ff899',
+      traceUser: true
+    })
+  }
   })

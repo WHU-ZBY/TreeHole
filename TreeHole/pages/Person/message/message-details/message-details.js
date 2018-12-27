@@ -4,18 +4,19 @@ Page({
   data: {
     re_reply: '',
     wxid: '',
-    replytowx:''
+    replytowx:'',
+    re_id:'',
   },
   onLoad: function (option) {
     var listId = option.id;
+
     var postData = app.replyData[listId];
-    replytowx: app.replyData[listId].wxid;
-    wxid:app.globalData.wxid;
     console.log(option.id + "ss");
     console.log(listId+"ss");
     console.log(app.replyData[listId]);
     this.setData({
       listDetails: postData,
+      re_id: listId,
     })
   },
   bindTextAreaBlur: function (e) {
@@ -31,7 +32,7 @@ Page({
     console.log("aa");
     var that = this;
     wx.request({
-      url: 'https://andyfool.com/file/Upload2/UpReply?name=' + app.globalData.userName + '&content=' + this.data.re_content + '&wxId=' + this.data.wxid + '&replyTo=null' + '&imageId=' + 1 + '&replytowx=' + this.data.replytowx,//this.data.replytowx
+      url: 'https://andyfool.com/file/Upload2/UpReply?name=' + app.globalData.userName + '&content=' + this.data.re_content + '&wxId=' + app.globalData.wxid + '&replyTo=null' + '&imageId=' + 1 + '&replytowx=' + app.replyData[this.data.re_id].wxid,//this.data.replytowx
       data: {
 
       },

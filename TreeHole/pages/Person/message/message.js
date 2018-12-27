@@ -14,7 +14,7 @@ Page({
   getRequest: function () {
     var that = this;
     wx.request({
-      url: 'https://andyfool.com/file/Get3/MyRePlies?wxid='+app.globalData.wxid ,//仅为示例，并非真实的接口地址
+      url: 'https://andyfool.com/file/Get3/MyReplies?wxid=' + app.globalData.wxid,//仅为示例，并非真实的接口地址
       data: {
       },
       method: 'Post',
@@ -22,7 +22,6 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
-        console.log(res.data)
         var object = res.data;
         that.setData({
           'datalist': object,

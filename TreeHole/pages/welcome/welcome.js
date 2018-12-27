@@ -1,23 +1,35 @@
 
 const app = getApp()
 Page({
-
+  data: {
+    motto: 'Hello World',
+    userInfo: {},
+    hasUserInfo: false,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    re_res:''
+  },
   onTap: function (event) {
-    // wx.navigateTo({
-    //     url:"../posts/post"
-    // });
+    app.globalData.wxid = this.data.re_res.result.openId;
+    console.log(app.globalData.wxid);
 
     wx.switchTab({
       url: "../Person/Person"
     });
 
   },
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
+
+  testopen:function() {
+    let that = this;
+    wx.cloud.callFunction({
+      name: 'testopen',
+      complete: res => {
+        console.log('callFunction test result: ', res),
+        that.setData({re_res:res})
+      },
+    })
+    
+  }
+,
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -25,6 +37,7 @@ Page({
     })
   },
   onLoad: function () {
+    this.testopen();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
