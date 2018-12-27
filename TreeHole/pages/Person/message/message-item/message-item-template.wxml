@@ -4,7 +4,7 @@
       <text>回复</text>
       <text class="message-name">{{name}}:</text>
       <text class="message-content">{{content}}</text>
-      <text class="date">{{time}}</text>
+      <text class="date">{{datetime}}</text>
     </view>
   </view>
 </template>

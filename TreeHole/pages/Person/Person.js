@@ -5,14 +5,15 @@ Page({
   data: {
     name:'',
     imageName:'',
-    num:''
+    _num:'1',
 
   },
   
   onLoad: function () {
     this.setData({
+      _num:app.globalData.num,
       name:app.globalData.userName,
-      imageName:listData.imageLocal[4].local
+      imageName: listData.imageLocal[this.data._num].local,
     });
   },
   onShow:function(){

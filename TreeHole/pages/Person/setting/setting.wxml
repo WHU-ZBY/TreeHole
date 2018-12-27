@@ -6,10 +6,10 @@
 </form>
 <view class="select">
 <text class="avater">选择扮演的角色</text>
-<button type="default" size="{{defaultSize}}" >锐雯</button>
-<button type="default" size="{{defaultSize}}" >武器大师</button>
-<button type="default" size="{{defaultSize}}" >菲奥娜</button>
-<button type="default" size="{{defaultSize}}" >皎月</button>
-<button type="default" size="{{defaultSize}}" >薇恩</button>
-<button type="default" size="{{defaultSize}}" >艾瑞莉娅</button>
+<button type="default" catchtap="onPostTap1" size="{{defaultSize}}" >阿狸</button>
+<button type="default" catchtap="onPostTap2" size="{{defaultSize}}" >提莫</button>
+<button type="default" catchtap="onPostTap3" size="{{defaultSize}}" >亚索</button>
+<button type="default" catchtap="onPostTap4" size="{{defaultSize}}" >伊泽瑞尔</button>
+<button type="default"  catchtap="onPostTap5" size="{{defaultSize}}" >艾瑞利亚</button>
+<button type="default" catchtap="onPostTap6" size="{{defaultSize}}" >皎月</button>
 </view>

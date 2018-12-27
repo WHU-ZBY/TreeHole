@@ -7,9 +7,7 @@
     "pages/interests/interests",
     "pages/List/create/create",
     "pages/Person/setting/setting",
-    "pages/Person/message/message",
-    "pages/Person/message/message-details/message-details",
-    "pages/text/text"
+    "pages/Person/message/message"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"
