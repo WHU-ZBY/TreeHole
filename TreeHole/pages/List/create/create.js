@@ -7,8 +7,19 @@ Page({
    */
   data: {
     re_content:'',
-    wxid:'1111',
+    wxid:'',
+    region:'1',
 
+  },
+  onLoad: function (option) {
+    var listId = option.id;
+    console.log("aa");
+    console.log(listId);
+    console.log("aa");
+    this.setData({
+      region:listId,
+      wxid:app.globalData.wxid,
+    })
   },
   bindTextAreaBlur: function (e) {
     var that=this;
@@ -19,10 +30,12 @@ Page({
   },    
   onPostTap:function()
   {
-
+    console.log("aa");
+    console.log(this.data.region);
+    console.log("aa");
     var that=this;
     wx.request({
-      url: 'https://andyfool.com/file/Upload/UpMessage?name=' + app.globalData.userInfo.nickName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'v&region=1&imageId=1',//仅为示例，并非真实的接口地址
+      url: 'https://andyfool.com/file/Upload1/UpMessage?name=' + app.globalData.userName+'&content='+this.data.re_content+'&wxId='+this.data.wxid+'&region='+this.data.region+'&imageId='+app.globalData.num,
       data: {
   
       },
@@ -42,62 +55,8 @@ Page({
     setTimeout(function () {
       wx.navigateBack();
       //要延时执行的代码
-    }, 1000) //延迟时间 这里是1秒
+    }, 500) //延迟时间 这里是1秒
   }, 
  
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

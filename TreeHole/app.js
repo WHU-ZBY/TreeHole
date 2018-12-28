@@ -1,23 +1,20 @@
 App({
   globalData: {
     userInfo: null,
-    appid: '1wqas2342dasaqwe2323424ac23qwe',//appid需自己提供，此处的appid我随机编写
-    secret: 'e0dassdadef2424234209bwqqweqw123ccqwa',//secret需自己提供，此处的secret我随机编写
+    appid: '',//appid需自己提供，此处的appid我随机编写
+    secret: '',//secret需自己提供，此处的secret我随机编写
+    userName:'默认',
+    userImage:'',
+    num:'1',
+    wxid:'123'
   },
   listData:{},
+  replyData:{},
     onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-
-      }
-    })
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -40,5 +37,11 @@ App({
       }
     })
   },
-  
+  onLaunch: function () {
+    //云开发初始化
+    wx.cloud.init({
+      env: 'test-9ff899',
+      traceUser: true
+    })
+  }
   })

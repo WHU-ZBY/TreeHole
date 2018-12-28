@@ -3,7 +3,7 @@
 <view class="container">
  
   <view class="author-date">
-    <image class="avatar" src="{{listDetails.avatar}}"></image>
+    <image class="avatar" src="{{imagelocal}}"></image>
     <text class="author">{{listDetails.name}}</text>
     <text class="const-text">发表于</text>
     <text class="date">{{listDetails.datatime}}</text>
@@ -11,9 +11,7 @@
     <view class="horizon"></view>
   <text class="detail">{{listDetails.content}}</text>
   <form bindsubmit="doSubmit">
-    <view class="textarea-wrp">
-      <textarea name="content" maxlength="200" style="height:3em"  auto-height="ture" placeholder="回复他，友善是讨论的开始" />
-    </view>
-    <button type="primary" size="{{primarySize}}" formType="submit" disabled="{{disabledSubmitBtn}}">回复</button>
-  </form>
+    <textarea name="content"   value='{{concent}}' bindblur="bindTextAreaBlur" maxlength="500" placeholder="你想说啥就写在这~" focus="{{focus}}"  />
+    <button formType="submit" disabled="{{disabledSubmitBtn}}" catchtap="onPostTap" >回复</button>
+</form>
 </view>

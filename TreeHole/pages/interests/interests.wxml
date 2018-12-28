@@ -3,7 +3,7 @@
 <view >
 <view class="col">
 <view class="part" data-listId='1' catchtap="onPostTap">
-<text class= "interest" >吐槽</text></view>
+<text class= "interest" >六学</text></view>
 
 <view class="part" data-listId='2' catchtap="onPostTap">
 <text class= "interest" >娱乐</text></view>

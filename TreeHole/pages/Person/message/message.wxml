@@ -1,8 +1,8 @@
 <import src="message-item/message-item-template.wxml" />
 <view>
-  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+  <block wx:for="{{datalist}}" wx:key="index"wx:for-item="item" wx:for-index="idx">
     <!--//template-->
-    <view catchtap="onPostTap" data-listId="{{item.id}}">
+    <view catchtap="onPostTap" data-listId="{{idx}}">
       <template is="messageItem" data="{{...item}}" />
     </view>
   </block>

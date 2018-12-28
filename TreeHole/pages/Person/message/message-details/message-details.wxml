@@ -10,8 +10,8 @@
   <text class="detail">{{listDetails.content}}</text>
   <form bindsubmit="doSubmit">
     <view class="textarea-wrp">
-      <textarea name="content" maxlength="200" style="height:3em"  auto-height="ture" placeholder="回复他，友善是讨论的开始" />
+    <textarea name="content"   value='{{concent}}' bindblur="bindTextAreaBlur" maxlength="500" placeholder="文明交流~" focus="{{focus}}"  />
     </view>
-    <button type="primary" size="{{primarySize}}" formType="submit" disabled="{{disabledSubmitBtn}}">回复</button>
-  </form>
+    <button formType="submit" disabled="{{disabledSubmitBtn}}" catchtap="onPostTap" >回复</button>
+</form>
 </view>

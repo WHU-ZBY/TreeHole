@@ -47,8 +47,8 @@ textarea {
 button {
     margin: 10rpx 20rpx;
     background: transparent;
-    color: #adadad;
-    border: 1rpx solid #c6c6c6;   
+    color: brown;
+    border: 2rpx solid brown;   
 }
 
 .horizon {

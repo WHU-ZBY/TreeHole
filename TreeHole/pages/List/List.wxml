@@ -7,8 +7,7 @@
       <template is="listItem" data="{{...item}}" />
     </view>
   </block>
-  <navigator id="post-btn" url="/pages/List/create/create" hover-class="none">
-    <image src="{{'../../images/icon/icon-feather.png'}}"></image>
-  </navigator>
+  <view catchtap="onPost" id="post-btn" >    
+  <image src="{{'../../images/icon/icon-feather.png'}}"></image></view>
 
 </view>
