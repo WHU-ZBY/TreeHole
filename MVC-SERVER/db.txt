@@ -1,4 +1,4 @@
-CREATE SCHEMA `wxdb` ;
+ CREATE SCHEMA `wxdb` ;
 
 CREATE TABLE `wxdb`.`messages` (
   `msId` INT NOT NULL,
