@@ -1,15 +1,24 @@
-
+<import src="../list-item/list-item-template.wxml" />
 <!--先静后动，先样式再数据-->
 <view class="container">
  
   <view class="author-date">
-    <image class="avatar" src="{{imagelocal}}"></image>
     <text class="author">{{listDetails.name}}</text>
     <text class="const-text">发表于</text>
     <text class="date">{{listDetails.datetime}}</text>
   </view>
     <view class="horizon"></view>
   <text class="detail">{{listDetails.content}}</text>
+ <image class="image" mode="aspectFit" style="opacity:{{0.55}}" 
+ src="{{'../../../images/treehole.png'}}" ></image> <text>______________________________________________________________</text>
+
+  <block wx:for="{{datalist}}"wx:key="index" wx:for-item="item" wx:for-index="idx">
+    <!--//template-->
+    <view  data-listId='{{idx}}'>
+      <template is="listItem" data="{{...item}}" />
+    </view>
+  </block>
+
   <form bindsubmit="doSubmit">
     <textarea name="content"   value='{{concent}}' bindblur="bindTextAreaBlur" maxlength="500" placeholder="你想说啥就写在这~" focus="{{focus}}"  />
     <button formType="submit" disabled="{{disabledSubmitBtn}}" catchtap="onPostTap" >回复</button>

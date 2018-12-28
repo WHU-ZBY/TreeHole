@@ -27,7 +27,8 @@ Page({
         });
         app.globalData.userName=object.name;
         app.globalData.num=object.imageid;
-        console.log(app.globalData.userName);
+        console.log(object.imageid);
+        console.log(app.globalData.num);
       }
     }),
     this.setData({

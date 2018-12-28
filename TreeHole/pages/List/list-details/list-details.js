@@ -4,7 +4,8 @@ Page({
   data: {
     imagelocal:'',
     msid: '',
-    replytowx: ''
+    replytowx: '',
+    datalist:''
 
   },
   onLoad: function(option) {
@@ -16,14 +17,38 @@ Page({
       listDetails: postData,
       imagelocal: "/images/list/"+postData.imageid+".jpg"
     })
-    console.log(postData.imageid),
-  console.log(this.data.imagelocal)
+    console.log(this.data.msid),
+      console.log(app.listData[listId].msid),
+  console.log(this.data.imagelocal),
+      this.getRequest();
   },
   bindTextAreaBlur: function (e) {
     var that = this;
     console.log(e.detail.value)
     that.setData({
       re_content: e.detail.value,
+    })
+  },
+  getRequest: function () {
+    var that = this;
+    wx.request({
+      url: 'https://andyfool.com/file/Get2/GetReplies?msid=' +this.data.msid,//仅为示例，并非真实的接口地址
+      data: {
+      },
+      method: 'Post',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data);
+        console.log("111");
+        var object = res.data;
+        that.setData({
+          'datalist': object,
+        });
+        app.listData = object;
+        //console.log(app.listData)
+      }
     })
   },
   onPostTap: function () {

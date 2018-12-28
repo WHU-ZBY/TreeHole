@@ -1,7 +1,10 @@
+@import "../list-item/list-item-template.wxss";
 page{
   background: cornsilk
 }
-
+.list-contaioner {
+  background-color: cornsilk;
+}
 
 .container {
   display: flex;
