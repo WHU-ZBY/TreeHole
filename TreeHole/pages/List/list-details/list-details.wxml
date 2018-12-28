@@ -6,7 +6,7 @@
     <image class="avatar" src="{{imagelocal}}"></image>
     <text class="author">{{listDetails.name}}</text>
     <text class="const-text">发表于</text>
-    <text class="date">{{listDetails.datatime}}</text>
+    <text class="date">{{listDetails.datetime}}</text>
   </view>
     <view class="horizon"></view>
   <text class="detail">{{listDetails.content}}</text>

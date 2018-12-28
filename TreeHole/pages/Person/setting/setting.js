@@ -24,7 +24,23 @@ Page({
     })
     app.globalData.userName = this.data.concent;
     console.log(this.data.concent),
-      console.log(app.globalData.userName)  //打印结果    ””  
+      console.log(app.globalData.userName)  //打印结果  
+
+    var that = this;
+    wx.request({
+      url: 'https://andyfool.com/file/Upload3/UploadId?name=' + app.globalData.userName +'&imageid='+app.globalData.num+ '&wxid='+app.globalData.wxid,
+      data: {
+
+      },
+      method: 'Post',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data)
+      }
+    })
+   
     wx.showToast({
       title: '修改成功',
       icon: 'success',

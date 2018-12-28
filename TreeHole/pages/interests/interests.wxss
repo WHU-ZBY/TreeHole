@@ -1,13 +1,22 @@
 /* pages/interests/interests.wxss */
 page{
-  background-color:  beige
+  background-color:    burlywood
 }
 .part{
-  border: 1px solid  lightgray;
-  padding-bottom: 1px;
-  margin: 10px;
-  display: flex;
-  float: left;
+        width: 280px;  
+        padding:8px;  
+        background-color:  burlywood;  
+        border-color: brown;  
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px;  
+        order:solid 10px #4d4e53;
+        border:solid 10px  chocolate;
+        border-radius:10px 40px 40px 10px;
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */  
+        text-align: center;  
+        vertical-align: middle;  
+        font-weight: 900;  
+        font-size:125%  
 }
 .interest{
   font-size: 32px;
