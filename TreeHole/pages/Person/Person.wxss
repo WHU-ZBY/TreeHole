@@ -1,11 +1,11 @@
 /* pages/Person/Person.wxss */
 page{
-  background-color:  aliceblue;
+  background-color:   burlywood;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
+  background-color:  burlywood;
 }
 
 .user-image-name {

@@ -3,11 +3,12 @@
     <image class="avatar" style="width: 100px; height: 100px; background-color: #eeeeee;" mode="aspectFill" src="{{imageName}}"></image>
   </view>
   <text class="name">{{name}}</text>
-
-  <navigator id="settings" url="/pages/Person/setting/setting">
+<view class="button">
+<navigator id="settings" url="/pages/Person/setting/setting">
     <text class="text">设置</text>
   </navigator>
   <navigator id="messgaes" url="/pages/Person/message/message">
     <text class="text">消息</text>
-  </navigator>
+  </navigator></view>
+  
 </view>
