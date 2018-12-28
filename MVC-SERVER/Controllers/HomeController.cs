@@ -5,6 +5,9 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using MVC.Models;
+using System.Collections.Immutable;
+using System.Collections.ObjectModel;
+using MySqlX.XDevAPI;
 
 namespace MVC.Controllers
 {
@@ -13,11 +16,11 @@ namespace MVC.Controllers
     {
 
         [HttpPost]
-        [Route("Get/{parameter}")]
+        [Route("Get1/{parameter}")]
 
-        public String GetMessageList(string region)
+        public String GetMessage(string kind,string region)
         {
-            if (region=="All")
+            if (region == "All")
             {
                 MessagerDb db = new MessagerDb();
                 List<Message> msList = db.GetAllMessage();
@@ -50,10 +53,11 @@ namespace MVC.Controllers
                 return a;
             }
         }
+        [Route("Get2/{parameter}")]
         public string GetReplies(string msid)
         {
             MessagerDb db = new MessagerDb();
-            List<Reply> rpList = db.Getreply(msid);
+            List<Reply> rpList = db.GetReply(msid);
             string a = "[";
             foreach (Reply reply in rpList)
             {
@@ -66,12 +70,60 @@ namespace MVC.Controllers
             a += "]";
             return a;
         }
-        [Route("Upload/{parameter}")]
+        [Route("Get3/{parameter}")]
+        public string MyReplies(string wxid)
+        {
+            MessagerDb db = new MessagerDb();
+            List<Reply> rpList = db.GetMyReply(wxid);
+            string a = "[";
+            foreach (Reply reply in rpList)
+            {
+                a += reply.toJson();
+                if (rpList.IndexOf(reply) < rpList.Count - 1)
+                {
+                    a += ",";
+                }
+            }
+            a += "]";
+            return a;
+        }
+        [Route("Get4/{parameter}")]
+        public string GetId(string wxid)
+        {
+            MessagerDb db = new MessagerDb();
+            return db.GetId(wxid);
+        }
+        [Route("Upload1/{parameter}")]
         public void UpMessage(string name, string content, string wxId, string region, string imageId)
         {
             Message a = new Message(name, content, wxId, region, imageId);
             MessagerDb db = new MessagerDb();
-            db.UpMessage(a);
+            db.UploadMessage(a);
+        }
+        [Route("Upload2/{parameter}")]
+        public void UpReply(string name, string content, string wxId, string replyTo, string imageId, string replytowx)
+        {
+            Reply a = new Reply(name,content,wxId,replyTo,imageId, replytowx);
+            MessagerDb db = new MessagerDb();
+            db.UploadReply(a);
+        }
+        [Route("Upload3/{parameter}")]
+        public void UpName(string name, string imageid,string wxid)
+        {
+            MessagerDb db = new MessagerDb();
+            db.UploadId(name,imageid, wxid);
+        }
+        [Route("DelMs/{parameter}")]
+        public void DelMs(string msid)
+        {      
+            MessagerDb db = new MessagerDb();
+            db.DeleteMessage(msid);
+        }
+        [Route("DelRp/{parameter}")]
+        public void DelRp(string rpid)
+        {
+            MessagerDb db = new MessagerDb();
+            db.DeleteReply(rpid);
         }
     }
 }
