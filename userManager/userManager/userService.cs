@@ -8,68 +8,36 @@ namespace userManager
 {
     public class userService
     {
-        public void AddMessage(messages s)
+        public List<user> users;
+        public List<reply> replies;
+        public void deleteUser(int msid)
         {
-            using (var db=new userDBExternal())
-            {
-                db.messages.Add(s);
-                db.SaveChanges();
-            }
         }
-        public void AddReplies(replies r)
+        public void deleteReply(int replyId)
         {
-            using (var db = new userDBExternal())
-            {
-                db.replies.Add(r);
-                db.SaveChanges();
-            }
-        }
-        public void DeleteMessage(int msid)
-        {
-            using (var db = new userDBExternal())
-            {
-                var message = db.messages.SingleOrDefault(o => o.msid == msid);
-                db.messages.Remove(message);
-                db.SaveChanges();
-            }
-        }
-        public void DeleteReplies(int id)
-        {
-            using (var db = new userDBExternal())
-            {
-                var user = db.replies.SingleOrDefault(o => o.replyid == id);
-                db.replies.Remove(user);
-                db.SaveChanges();
-            }
-        }
 
-        public messages GetMessage(int id)
-        {
-            using (var db = new userDBExternal())
-            {
-                return db.messages.SingleOrDefault(o => o.msid == id);
-            }
         }
-        public replies GetReply(int id)
+       public user findUser(int msid)
         {
-            using (var db = new userDBExternal())
+            foreach(var u in users)
             {
-                return db.replies.SingleOrDefault(o => o.replyid == id);
+                if (u.MsId == msid)
+                {
+                    return u;
+                }
             }
+            return null;
         }
-        public List<messages> GetAllMessages()
+        public reply findReply(int replyId)
         {
-            using (var db = new userDBExternal())
+            foreach(var r in replies)
             {
-                return db.messages.ToList<messages>();
+                if (r.replyId == replyId)
+                {
+                    return r;
+                }
             }
-        }
-        public List<replies> GetAllReplies()
-        {
-            using (var db = new userDBExternal())
-            {
-                return db.replies.ToList<replies>();
-            }
+            return null;
         }
     }
 }
