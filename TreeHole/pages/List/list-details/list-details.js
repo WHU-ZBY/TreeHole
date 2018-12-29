@@ -15,7 +15,7 @@ Page({
       msid: app.listData[listId].msid,
       replytowx: app.listData[listId].wxid,
       listDetails: postData,
-      imagelocal: "/images/list/"+postData.imageid+".jpg"
+      
     })
     console.log(this.data.msid),
       console.log(app.listData[listId].msid),
