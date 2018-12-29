@@ -35,7 +35,6 @@ namespace MVC
                     }
                 }
             }
-            list.Reverse();
             return list;
         }
         public List<Reply> GetMyReply(string wxid)
