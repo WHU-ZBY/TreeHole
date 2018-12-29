@@ -24,3 +24,7 @@ c:\users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\Google.Protobu
 c:\users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\MySql.Data.xml
 c:\users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\MySql.Data.EntityFramework.xml
 c:\users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\Newtonsoft.Json.dll
+C:\Users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\doapc\source\repos\userManager\userManagerFrom\bin\Debug\Newtonsoft.Json.xml
+C:\Users\doapc\source\repos\userManager\userManagerFrom\obj\Debug\userManagerFrom.Form2.resources

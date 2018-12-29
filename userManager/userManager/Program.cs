@@ -11,9 +11,6 @@ namespace userManager
         static void Main(string[] args)
         {
             userService userService = new userService();
-
-            messages mes = new messages(1, "apdo", "dsafas", "what is content", "20181214", "china", "4");
-            userService.AddMessage(mes);
         }
     }
 }
